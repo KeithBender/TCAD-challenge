@@ -1,3 +1,41 @@
+## TCAD Coding Challenge and Answers
+
+a.	What is the purpose of this application, where is the data it uses pulled from, and what application features are important for someone looking at the code to understand?
+
+    Purpose: allows users to filter through data from robohash api that return a json payload with information about each robot.
+    Data is pulled form robohash's api
+    Application features: each component is simple to understand. They were broken down to the simplest form and work together to build this app.
+
+b.	What are some good ways to us passwords, keys, etc. in your applications while preventing them from being accessed by the outside world?
+    
+    They need to be encrypted before being saved in a database. Usually what you do is that you use an algorithm that cannot be reversed.
+    Usually when you encode stuff, you need to add a hash key, or an encryption key
+    and that key you always use it for encoding
+    if the key changes, the encoding for the same password will be different
+
+c.	Your favorite SQL database includes tables called properties and addresses.
+- The properties table has one record per property, and has 2,000 records in it.
+- The properties table has one column only: prop_id.
+- The addresses table has one record per property, per year, and has 500,000 records in it.
+- The addresses table has three columns: prop_id, address, and year.
+- The year column is comprised of integer values for each year (2010, 2011, and so on)
+
+What is a SQL query that will pull all of the prop_id’s and current (2019) addresses for any property in the addresses table, along with a column denoting whether that property exists in the properties table?
+
+    
+    select prop_id, address, (select ) as exists from addresses where year = 2019;
+    not quite sure about this one.
+
+d.	What are some cases for or against containerization of internally-used micro-applications?
+    For: 
+        Continuous Deployment and Testing, Rapid Deployment, Simplicity and Faster Configurations, Compatibility and Maintainability, and efficiency
+    Against: 
+        Security, Isolation, Networking, Containers add more cost than you expect.
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
